@@ -13,5 +13,8 @@ def test_ingredient():
     assert cheese == cheese
     assert cheese != butter
     assert repr(butter) == "Ingredient('manteiga')"
-    assert ham.restrictions == { Restriction.ANIMAL_DERIVED, Restriction.ANIMAL_MEAT }
-
+    restrictions = {
+        Restriction.ANIMAL_DERIVED,
+        Restriction.ANIMAL_MEAT
+    }
+    assert ham.restrictions == restrictions

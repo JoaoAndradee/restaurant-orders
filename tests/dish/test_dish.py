@@ -18,7 +18,9 @@ def test_dish():
     assert repr(cheese) == "Dish('queijo', R$10.00)"
 
     cheese.add_ingredient_dependency(ingredient_ham, 5)
-    assert cheese.get_restrictions() == {Restriction.ANIMAL_MEAT, Restriction.ANIMAL_DERIVED}
+    assert cheese.get_restrictions() == {
+        Restriction.ANIMAL_MEAT, Restriction.ANIMAL_DERIVED
+    }
     assert cheese.get_ingredients() == {Ingredient('presunto')}
 
     with pytest.raises(TypeError):

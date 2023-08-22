@@ -2,6 +2,7 @@ import csv
 from models.dish import Dish
 from models.ingredient import Ingredient
 
+
 class MenuData:
     def __init__(self, source_path: str) -> None:
         self.dishes = set()
